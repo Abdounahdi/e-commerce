@@ -183,7 +183,7 @@ previousBtn.addEventListener("click", function (e) {
 
   modal.querySelector(
     ".image_preview-big"
-  ).src = `http://127.0.0.1:8080/images/image-product-${previousID}.jpg`;
+  ).src = `/images/image-product-${previousID}.jpg`;
 
   document
     .getElementById(`${previousID + 4}`)
@@ -213,7 +213,7 @@ nextBtn.addEventListener("click", function (e) {
 
   modal.querySelector(
     ".image_preview-big"
-  ).src = `http://127.0.0.1:8080/images/image-product-${previousID}.jpg`;
+  ).src = `/images/image-product-${previousID}.jpg`;
 
   document
     .getElementById(`${previousID + 4}`)

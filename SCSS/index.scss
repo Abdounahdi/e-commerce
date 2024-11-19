@@ -26,7 +26,7 @@ $weightNM: 400;
 $breakpoints: (
   "laptop": 1200px,
 
-  "tab--L" : 900px , 
+  "tab--L": 900px,
 
   "tablette": 700px,
 
@@ -75,11 +75,12 @@ body {
   color: $darkGreyishBlue;
   margin: auto 10rem;
   transition: all 0.4s;
+  position: relative;
   @include laptop {
     margin: auto 5rem;
   }
 
-  @include tablette{
+  @include tablette {
     margin: auto 2rem;
   }
 
@@ -101,9 +102,9 @@ body {
     margin-top: 3rem;
     margin-bottom: 7rem;
 
-    @include tablette{
+    @include tablette {
       padding-bottom: 3rem;
-    };
+    }
 
     @include mobile-L {
       padding: 0 2rem 0 2rem;
@@ -142,9 +143,9 @@ body {
         height: 20px;
         padding-top: 1rem;
         overflow: visible;
-        @include tablette{
-          padding: 0 ; 
-        };
+        @include tablette {
+          padding: 0;
+        }
       }
 
       .nav_links {
@@ -168,13 +169,11 @@ body {
           padding-bottom: 4rem;
           padding-top: 1rem;
           border-bottom: 3px solid $white;
-          
         }
         .nav_link:active,
         .nav_link:visited {
           color: $darkGreyishBlue;
           text-decoration: none;
-          
         }
         .nav_link:hover {
           border-bottom: 3px solid $primaryOrange;
@@ -205,15 +204,15 @@ body {
         cursor: pointer;
       }
 
-      .cart_logo-svg:hover{
+      .cart_logo-svg:hover {
         fill: $darkestBlue;
       }
 
-      .cart-container{
+      .cart-container {
         position: relative;
       }
 
-      .counter_items-added{
+      .counter_items-added {
         position: absolute;
         color: $white;
         padding: 0.2rem 0.5rem;
@@ -222,10 +221,8 @@ body {
         font-size: 1.1rem;
         top: 0;
         right: 0;
-        transform: translate(50% , -50%);
+        transform: translate(50%, -50%);
       }
-
-      
 
       .profile_pic {
         cursor: pointer;
@@ -236,110 +233,109 @@ body {
         }
       }
 
-      .profile_pic:hover{
+      .profile_pic:hover {
         outline: solid 2px $primaryOrange;
         border-radius: 50%;
       }
 
-
-      .cart_details-container{
+      .cart_details-container {
         // width: 40rem;
         width: 400%;
         // height: 600%;
         height: fit-content;
         bottom: 0;
         right: 0;
-        transform: translate(20% , 105%);
+        transform: translate(20%, 105%);
         position: absolute;
         background-color: $white;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         padding: 1rem 0;
 
-        @include laptop{
+        @include laptop {
           transform: translate(8%, 105%);
           z-index: 999;
         }
 
-        @include tablette{
+        @include tablette {
           width: 500%;
           transform: translate(0, 105%);
         }
 
-        @include mobile-L{
+        @include mobile-L {
           width: 590%;
           transform: translate(0, 125%);
           border-radius: 1rem;
         }
 
-        .cart-header{
-          border-bottom: 1px solid  hsla(220, 14%, 75%, 0.646);
-          padding: 1rem 2rem 2rem 2rem ;
+        .cart-header {
+          border-bottom: 1px solid hsla(220, 14%, 75%, 0.646);
+          padding: 1rem 2rem 2rem 2rem;
           font-size: $fontSize;
           font-weight: $weightBD;
           color: $darkestBlue;
         }
 
-        .product_added-container{
+        .product_added-container {
           display: flex;
           gap: 1.5rem;
           align-items: center;
           justify-content: center;
-          flex-direction:column ;
+          flex-direction: column;
           text-align: center;
           padding: 1rem 2rem;
 
-          .empty_cart-text{
+          .empty_cart-text {
             font-size: $fontSize;
             font-weight: $weightBD;
             padding-top: 8rem;
+            padding-bottom: 8rem;
           }
 
-          .product_added-details{
+          .product_added-details {
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: 100%;
 
-            .product_img{
+            .product_img {
               width: 15%;
               border-radius: 1rem;
-
             }
 
-            .product_details-text{
+            .product_details-text {
               display: flex;
               flex-direction: column;
               gap: 0.5rem;
               color: $grayishBlue;
               font-size: 1.5rem;
-              .product_total-price{
+              .product_total-price {
                 display: flex;
-                gap:0.5rem;
-                .total_price{
+                gap: 0.5rem;
+                .total_price {
                   font-weight: $weightBD;
                   color: $darkestBlue;
                 }
               }
             }
 
-            .product_delete-btn{
+            .product_delete-btn {
               cursor: pointer;
-              background: none ;
+              background: none;
               border: none;
 
-              svg{
+              svg {
                 width: 1.4rem;
                 height: 1.6rem;
               }
             }
           }
 
-          .checkout_btn{
+          .checkout_btn {
             background: none;
             cursor: pointer;
             width: 100%;
             border: none;
-            padding: 1.5rem 0 ;
+            padding: 1.5rem 0;
             background-color: $primaryOrange;
             border-radius: 1rem;
             color: $darkestBlue;
@@ -347,7 +343,7 @@ body {
             transition: all 0.2s ease-in-out;
           }
 
-          .checkout_btn:hover{
+          .checkout_btn:hover {
             background-color: $paleOrange;
           }
         }
@@ -366,15 +362,15 @@ main {
   justify-content: center;
   align-items: center;
 
-  @include laptop{
+  @include laptop {
     gap: 3rem;
   }
 
-  @include tablette{
+  @include tablette {
     flex-direction: column;
   }
 
-  @include mobile-L{
+  @include mobile-L {
     margin: 0;
     width: 100%;
   }
@@ -386,12 +382,12 @@ main {
     gap: 3.5rem;
     padding-bottom: 5rem;
 
-    @include tablette{
+    @include tablette {
       width: 90%;
       flex-direction: row;
     }
 
-    @include mobile-L{
+    @include mobile-L {
       width: 100%;
       height: 60%;
       padding-bottom: 0;
@@ -400,11 +396,11 @@ main {
     .image_preview-big {
       border-radius: 1.5rem;
 
-      @include tablette{
+      @include tablette {
         width: 80%;
       }
 
-      @include mobile-L{
+      @include mobile-L {
         width: 100%;
         border-radius: 0;
       }
@@ -416,11 +412,11 @@ main {
       gap: 2.5rem;
       width: 100%;
 
-      @include tablette{
+      @include tablette {
         flex-direction: column;
       }
 
-      @include mobile-L{
+      @include mobile-L {
         display: none;
       }
 
@@ -429,7 +425,7 @@ main {
         width: 20%;
         cursor: pointer;
         overflow: hidden;
-        @include tablette{
+        @include tablette {
           height: 100%;
           width: 110%;
         }
@@ -438,7 +434,6 @@ main {
       .image_preview-sm {
         width: 100%;
         height: 100%;
-        
       }
 
       .image_preview-sm:hover {
@@ -462,11 +457,11 @@ main {
     flex-direction: column;
     gap: 2.5rem;
 
-    @include laptop{
+    @include laptop {
       padding-bottom: 15rem;
     }
 
-    @include tablette{
+    @include tablette {
       width: 90%;
     }
 
@@ -491,7 +486,7 @@ main {
           color: $darkestBlue;
           font-weight: $weightBD;
 
-          @include laptop{
+          @include laptop {
             font-size: 3rem;
           }
         }
@@ -514,7 +509,7 @@ main {
 
           font-size: $fontSize;
 
-          @include mobile-L{
+          @include mobile-L {
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
@@ -556,7 +551,7 @@ main {
 
       width: 100%;
 
-      @include mobile-L{
+      @include mobile-L {
         flex-direction: column;
       }
 
@@ -576,7 +571,7 @@ main {
         border-radius: 1rem;
         width: 30%;
 
-        @include mobile-L{
+        @include mobile-L {
           width: 100%;
           padding: 2rem 1rem;
         }
@@ -601,12 +596,12 @@ main {
         transition: all 0.2s ease-in;
         box-shadow: hsla(26, 100%, 55%, 0.396) 0px 5px 15px;
 
-        .add_to-cart--text{
+        .add_to-cart--text {
           font-weight: $weightBD;
         }
       }
       .add_to-cart--btn:hover {
-        background-color:$paleOrange;
+        background-color: $paleOrange;
       }
 
       .plus_btn-svg,
@@ -636,9 +631,58 @@ main {
       }
     }
   }
+
+  .modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    .previous_btn {
+      top: 36%;
+      left: -5%;
+      background: white;
+      border-radius: 56%;
+      padding: 1.1rem 1.4rem;
+    }
+
+    .next_btn {
+      top: 36%;
+      right: -5%;
+      background: white;
+      border-radius: 56%;
+      padding: 1.1rem 1.4rem;
+    }
+    .modal_imgs {
+      position: absolute;
+      top: 5%;
+      right: 30%;
+    }
+
+    .imageContainer--outline {
+      background-color: rgba(255, 255, 255);
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.783);
+      height: 150%;
+      width: 150%;
+      transform: translate(-25%, -25%);
+    }
+  }
 }
 
+.modal_previous-svg {
+}
+.modal_next-svg {
+}
 
-.hidden{
+.hidden {
   display: none !important;
 }
